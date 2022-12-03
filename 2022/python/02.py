@@ -4,7 +4,7 @@ score01 = 0
 score02 = 0
 
 with open(sys.argv[1], mode="r") as file:
-    rounds = [(x.rstrip("\n")).split(" ") for x in file.readlines()]
+    rounds = [ ((["A", "B", "C"].index(x[0])), (["X", "Y", "Z"].index(x[1]))) for x in [ (x.rstrip("\n")).split(" ") for x in file.readlines() ] ]
     
 for i in range(0, len(rounds)):
 

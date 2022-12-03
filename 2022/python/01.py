@@ -5,8 +5,7 @@ calories = 0
 
 
 with open(sys.argv[1], mode="r") as file:
-    data = file.readlines()
-    data = [False if x == '\n' else int(x.rstrip('\n')) for x in data]
+    data = [False if x == '\n' else int(x.rstrip('\n')) for x in file.readlines()]
 
 ### part one
 for i in range(0,len(data)):
@@ -17,7 +16,7 @@ for i in range(0,len(data)):
     calories += data[i]
 
 elfCalories.sort(key=lambda a: a[1], reverse=True)
-print(f"elf: {elfCalories[0][0]} at {elfCalories[0][1]} calories")
+print(f"{elfCalories[0][1]}")
 ### end
 
 
