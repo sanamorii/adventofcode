@@ -1,0 +1,11 @@
+PL1         PL2         result
+
+Rock        Rock        - draw
+Rock        Paper       - lose
+Rock        Scissors    - win
+Paper       Rock        - win
+Paper       Paper       - draw
+Paper       Scissors    - lose
+Scissors    Rock        - lose
+Scissors    Paper       - win
+Scissors    Scissors    - draw
