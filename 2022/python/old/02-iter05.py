@@ -4,7 +4,6 @@ score = 0
 
 with open(sys.argv[1], mode="r") as file:
     rounds = [(x.rstrip("\n")).split(" ") for x in file.readlines()]
-    
 
 for i in range(0, len(rounds)):
     p1 = ["X", "Y", "Z"].index(rounds[i][1])
@@ -18,7 +17,5 @@ for i in range(0, len(rounds)):
         
     # win # p1 == (p2+1 % len(choices[0])) or p1 == (p2-2 % len(choices[0])):
     else: score += (p1+1) + 6
-
-       
 
 print(score)
